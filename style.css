@@ -18,23 +18,11 @@ Text Domain: tritons
    Tout le reste (couleurs, typo, espacements) vient de theme.json.
    -------------------------------------------------------------------------- */
 
-/* Logo — le disque a portee. Variante blanche pour les fonds encre. */
-.tritons-logo {
-	display: block;
-	flex: none;
-	width: 64px;
-	height: 64px;
-	background: url(assets/logo-tritons.svg) center / contain no-repeat;
-}
-
-.tritons-logo--blanc {
-	background-image: url(assets/logo-tritons-blanc.svg);
-}
-
-/* Pied de page : la marque peut respirer davantage. */
-.tritons-logo--grand {
-	width: 72px;
-	height: 72px;
+/* Logo du site — l'image et sa taille sont gerees par le bloc natif
+   « Logo du site », televerse dans la mediatheque. Sur fond encre, on
+   inverse le noir et le blanc plutot que de maintenir un second fichier. */
+.tritons-logo-inverse img {
+	filter: invert(1);
 }
 
 /* Portee — cinq lignes espacees de 9px, motif de marque du pied de page. */

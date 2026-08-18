@@ -1,9 +1,9 @@
 <!-- wp:group {"tagName":"footer","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|xxxl","bottom":"var:preset|spacing|xl","left":"var:preset|spacing|xl","right":"var:preset|spacing|xl"}}},"backgroundColor":"ink-900","textColor":"paper-200","layout":{"type":"constrained","contentSize":"1120px"}} -->
 <footer class="wp-block-group alignfull has-paper-200-color has-ink-900-background-color has-text-color has-background" style="padding-top:var(--wp--preset--spacing--xxxl);padding-bottom:var(--wp--preset--spacing--xl);padding-left:var(--wp--preset--spacing--xl);padding-right:var(--wp--preset--spacing--xl)">
 
-	<!-- wp:html -->
-	<div class="tritons-staff" aria-hidden="true"></div>
-	<!-- /wp:html -->
+	<!-- wp:group {"className":"tritons-staff","layout":{"type":"constrained"}} -->
+	<div class="wp-block-group tritons-staff"></div>
+	<!-- /wp:group -->
 
 	<!-- wp:columns {"style":{"spacing":{"margin":{"top":"var:preset|spacing|xxl"},"blockGap":{"top":"var:preset|spacing|xl","left":"var:preset|spacing|xxl"}}}} -->
 	<div class="wp-block-columns" style="margin-top:var(--wp--preset--spacing--xxl)">
@@ -11,9 +11,7 @@
 		<!-- wp:column {"width":"40%"} -->
 		<div class="wp-block-column" style="flex-basis:40%">
 
-			<!-- wp:html -->
-			<span class="tritons-logo tritons-logo--blanc tritons-logo--grand" role="img" aria-label="Les Tritons"></span>
-			<!-- /wp:html -->
+			<!-- wp:site-logo {"width":72,"className":"tritons-logo-inverse"} /-->
 
 			<!-- wp:paragraph {"style":{"spacing":{"margin":{"top":"var:preset|spacing|md"}},"typography":{"lineHeight":"1.7"}},"fontSize":"meta"} -->
 			<p class="has-meta-font-size" style="margin-top:var(--wp--preset--spacing--md);line-height:1.7">SIRET · À COMPLÉTER<br>RNA · À COMPLÉTER<br>Licence spectacle · À COMPLÉTER<br>www.tritons.eu</p>
