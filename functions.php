@@ -27,11 +27,11 @@ function tritons_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'tritons_enqueue_styles' );
 
 /**
- * Applique la même feuille de style dans l'éditeur de blocs,
- * pour que le logo et la portée s'y affichent aussi.
+ * Applique la feuille de style du thème dans l'éditeur, puis editor.css
+ * qui rend visible ce que le site ne montre qu'au survol.
  */
 function tritons_editor_styles() {
-	add_editor_style( 'style.css' );
+	add_editor_style( array( 'style.css', 'editor.css' ) );
 }
 add_action( 'after_setup_theme', 'tritons_editor_styles' );
 

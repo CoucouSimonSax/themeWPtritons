@@ -1,0 +1,17 @@
+/*
+ * Feuille de style propre à l'éditeur de blocs.
+ *
+ * Elle ne s'applique jamais sur le site public : elle sert à rendre
+ * manipulable, dans l'éditeur, ce qui est délibérément caché à l'écran.
+ */
+
+/* Miniatures de projet — sur le site, le voile et le nom n'apparaissent
+   qu'au survol. Dans l'éditeur il faut les voir en permanence, sans quoi
+   le texte serait impossible à sélectionner et le lien impossible à poser. */
+.tritons-miniature .wp-block-cover__background {
+	opacity: .55;
+}
+
+.tritons-miniature .wp-block-cover__inner-container {
+	opacity: 1;
+}
