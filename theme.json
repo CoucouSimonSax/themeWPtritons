@@ -13,16 +13,56 @@
 			"defaultGradients": false,
 			"defaultDuotone": false,
 			"palette": [
-				{ "slug": "ink-900", "name": "Encre", "color": "#000000" },
-				{ "slug": "ink-700", "name": "Texte", "color": "#2b2b2b" },
-				{ "slug": "ink-500", "name": "Gris moyen", "color": "#5e5e5e" },
-				{ "slug": "ink-300", "name": "Texte discret", "color": "#8f8f8f" },
-				{ "slug": "ink-200", "name": "Bordure de champ", "color": "#b3b3b3" },
-				{ "slug": "ink-100", "name": "Filet", "color": "#d6d6d6" },
-				{ "slug": "paper-200", "name": "Surlignage", "color": "#e4e4e4" },
-				{ "slug": "paper-100", "name": "Bloc creux", "color": "#f0f0f0" },
-				{ "slug": "paper-050", "name": "Papier", "color": "#f7f7f7" },
-				{ "slug": "paper-000", "name": "Blanc", "color": "#ffffff" }
+				{
+					"slug": "ink-900",
+					"name": "Encre",
+					"color": "#000000"
+				},
+				{
+					"slug": "ink-700",
+					"name": "Texte",
+					"color": "#2b2b2b"
+				},
+				{
+					"slug": "ink-500",
+					"name": "Gris moyen",
+					"color": "#5e5e5e"
+				},
+				{
+					"slug": "ink-300",
+					"name": "Texte discret",
+					"color": "#8f8f8f"
+				},
+				{
+					"slug": "ink-200",
+					"name": "Bordure de champ",
+					"color": "#b3b3b3"
+				},
+				{
+					"slug": "ink-100",
+					"name": "Filet",
+					"color": "#d6d6d6"
+				},
+				{
+					"slug": "paper-200",
+					"name": "Surlignage",
+					"color": "#e4e4e4"
+				},
+				{
+					"slug": "paper-100",
+					"name": "Bloc creux",
+					"color": "#f0f0f0"
+				},
+				{
+					"slug": "paper-050",
+					"name": "Papier",
+					"color": "#f7f7f7"
+				},
+				{
+					"slug": "paper-000",
+					"name": "Blanc",
+					"color": "#ffffff"
+				}
 			]
 		},
 		"typography": {
@@ -32,39 +72,231 @@
 				{
 					"slug": "gravity",
 					"name": "Gravity",
-					"fontFamily": "\"Gravity\", \"Futura\", \"Century Gothic\", system-ui, sans-serif"
+					"fontFamily": "\"Gravity\", \"Futura\", \"Century Gothic\", system-ui, sans-serif",
+					"fontFace": [
+						{
+							"fontFamily": "Gravity",
+							"fontWeight": "200",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/Gravity-UltraLight.woff2"
+							]
+						},
+						{
+							"fontFamily": "Gravity",
+							"fontWeight": "200",
+							"fontStyle": "italic",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/Gravity-UltraLightItalic.woff2"
+							]
+						},
+						{
+							"fontFamily": "Gravity",
+							"fontWeight": "300",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/Gravity-Light.woff2"
+							]
+						},
+						{
+							"fontFamily": "Gravity",
+							"fontWeight": "300",
+							"fontStyle": "italic",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/Gravity-LightItalic.woff2"
+							]
+						},
+						{
+							"fontFamily": "Gravity",
+							"fontWeight": "350",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/Gravity-Book.woff2"
+							]
+						},
+						{
+							"fontFamily": "Gravity",
+							"fontWeight": "350",
+							"fontStyle": "italic",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/Gravity-BookItalic.woff2"
+							]
+						},
+						{
+							"fontFamily": "Gravity",
+							"fontWeight": "400",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/Gravity-Regular.woff2"
+							]
+						},
+						{
+							"fontFamily": "Gravity",
+							"fontWeight": "400",
+							"fontStyle": "italic",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/Gravity-Italic.woff2"
+							]
+						},
+						{
+							"fontFamily": "Gravity",
+							"fontWeight": "700",
+							"fontStyle": "normal",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/Gravity-Bold.woff2"
+							]
+						},
+						{
+							"fontFamily": "Gravity",
+							"fontWeight": "700",
+							"fontStyle": "italic",
+							"fontDisplay": "swap",
+							"src": [
+								"file:./assets/fonts/Gravity-BoldItalic.woff2"
+							]
+						}
+					]
 				}
 			],
 			"fontSizes": [
-				{ "slug": "micro", "name": "Micro", "size": "11px" },
-				{ "slug": "meta", "name": "Meta", "size": "12px" },
-				{ "slug": "xs", "name": "Tres petit", "size": "13px" },
-				{ "slug": "sm", "name": "Petit", "size": "15px" },
-				{ "slug": "md", "name": "Courant", "size": "17px" },
-				{ "slug": "lg", "name": "Grand", "size": "20px" },
-				{ "slug": "xl", "name": "Tres grand", "size": "24px" },
-				{ "slug": "xxl", "name": "Section", "size": "30px" },
-				{ "slug": "xxxl", "name": "Titre", "size": "38px" },
-				{ "slug": "display", "name": "Display", "size": "48px" },
-				{ "slug": "display-lg", "name": "Display large", "size": "62px" },
-				{ "slug": "display-xl", "name": "Display XL", "size": "80px" }
+				{
+					"slug": "micro",
+					"name": "Micro",
+					"size": "11px"
+				},
+				{
+					"slug": "meta",
+					"name": "Meta",
+					"size": "12px"
+				},
+				{
+					"slug": "xs",
+					"name": "Tres petit",
+					"size": "13px"
+				},
+				{
+					"slug": "sm",
+					"name": "Petit",
+					"size": "15px"
+				},
+				{
+					"slug": "md",
+					"name": "Courant",
+					"size": "17px"
+				},
+				{
+					"slug": "lg",
+					"name": "Grand",
+					"size": "20px"
+				},
+				{
+					"slug": "xl",
+					"name": "Tres grand",
+					"size": "24px"
+				},
+				{
+					"slug": "xxl",
+					"name": "Section",
+					"size": "30px"
+				},
+				{
+					"slug": "xxxl",
+					"name": "Titre",
+					"size": "38px"
+				},
+				{
+					"slug": "display",
+					"name": "Display",
+					"size": "48px"
+				},
+				{
+					"slug": "display-lg",
+					"name": "Display large",
+					"size": "62px"
+				},
+				{
+					"slug": "display-xl",
+					"name": "Display XL",
+					"size": "80px"
+				}
 			]
 		},
 		"spacing": {
 			"defaultSpacingSizes": false,
-			"units": [ "px", "rem", "em", "%", "vh", "vw", "ch" ],
+			"units": [
+				"px",
+				"rem",
+				"em",
+				"%",
+				"vh",
+				"vw",
+				"ch"
+			],
 			"spacingSizes": [
-				{ "slug": "xxxs", "name": "3XS", "size": "4px" },
-				{ "slug": "xxs", "name": "2XS", "size": "6px" },
-				{ "slug": "xs", "name": "XS", "size": "8px" },
-				{ "slug": "sm", "name": "S", "size": "12px" },
-				{ "slug": "md", "name": "M", "size": "16px" },
-				{ "slug": "lg", "name": "L", "size": "24px" },
-				{ "slug": "xl", "name": "XL", "size": "32px" },
-				{ "slug": "xxl", "name": "2XL", "size": "48px" },
-				{ "slug": "xxxl", "name": "3XL", "size": "64px" },
-				{ "slug": "huge", "name": "4XL", "size": "96px" },
-				{ "slug": "giant", "name": "5XL", "size": "144px" }
+				{
+					"slug": "xxxs",
+					"name": "3XS",
+					"size": "4px"
+				},
+				{
+					"slug": "xxs",
+					"name": "2XS",
+					"size": "6px"
+				},
+				{
+					"slug": "xs",
+					"name": "XS",
+					"size": "8px"
+				},
+				{
+					"slug": "sm",
+					"name": "S",
+					"size": "12px"
+				},
+				{
+					"slug": "md",
+					"name": "M",
+					"size": "16px"
+				},
+				{
+					"slug": "lg",
+					"name": "L",
+					"size": "24px"
+				},
+				{
+					"slug": "xl",
+					"name": "XL",
+					"size": "32px"
+				},
+				{
+					"slug": "xxl",
+					"name": "2XL",
+					"size": "48px"
+				},
+				{
+					"slug": "xxxl",
+					"name": "3XL",
+					"size": "64px"
+				},
+				{
+					"slug": "huge",
+					"name": "4XL",
+					"size": "96px"
+				},
+				{
+					"slug": "giant",
+					"name": "5XL",
+					"size": "144px"
+				}
 			]
 		},
 		"border": {
@@ -96,14 +328,22 @@
 		},
 		"elements": {
 			"link": {
-				"color": { "text": "var:preset|color|ink-900" },
-				"typography": { "textDecoration": "underline" },
+				"color": {
+					"text": "var:preset|color|ink-900"
+				},
+				"typography": {
+					"textDecoration": "underline"
+				},
 				":hover": {
-					"color": { "text": "var:preset|color|ink-500" }
+					"color": {
+						"text": "var:preset|color|ink-500"
+					}
 				}
 			},
 			"heading": {
-				"color": { "text": "var:preset|color|ink-900" },
+				"color": {
+					"text": "var:preset|color|ink-900"
+				},
 				"typography": {
 					"fontFamily": "var:preset|font-family|gravity",
 					"lineHeight": "1.18"
@@ -152,6 +392,53 @@
 					"textTransform": "uppercase"
 				}
 			}
+		},
+		"blocks": {
+			"core/navigation": {
+				"typography": {
+					"fontSize": "var:preset|font-size|meta",
+					"fontWeight": "700",
+					"letterSpacing": "0.16em",
+					"textTransform": "uppercase"
+				},
+				"elements": {
+					"link": {
+						"color": {
+							"text": "var:preset|color|ink-500"
+						},
+						"typography": {
+							"textDecoration": "none"
+						},
+						":hover": {
+							"color": {
+								"text": "var:preset|color|ink-900"
+							}
+						}
+					}
+				}
+			},
+			"core/site-tagline": {
+				"typography": {
+					"fontWeight": "700"
+				}
+			},
+			"core/separator": {
+				"color": {
+					"text": "var:preset|color|ink-100"
+				}
+			}
 		}
-	}
+	},
+	"templateParts": [
+		{
+			"name": "header",
+			"title": "En-tete",
+			"area": "header"
+		},
+		{
+			"name": "footer",
+			"title": "Pied de page",
+			"area": "footer"
+		}
+	]
 }

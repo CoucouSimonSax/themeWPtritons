@@ -12,3 +12,41 @@ License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tritons
 */
+
+/* --------------------------------------------------------------------------
+   Le strict minimum non exprimable dans theme.json : la marque.
+   Tout le reste (couleurs, typo, espacements) vient de theme.json.
+   -------------------------------------------------------------------------- */
+
+/* Logo — le disque a portee. Variante blanche pour les fonds encre. */
+.tritons-logo {
+	display: block;
+	flex: none;
+	width: 44px;
+	height: 44px;
+	background: url(assets/logo-tritons.svg) center / contain no-repeat;
+}
+
+.tritons-logo--blanc {
+	background-image: url(assets/logo-tritons-blanc.svg);
+}
+
+/* Portee — cinq lignes espacees de 9px, motif de marque du pied de page. */
+.tritons-staff {
+	height: 37px;
+	background-image: repeating-linear-gradient(
+		to bottom,
+		currentColor 0, currentColor 1px,
+		transparent 1px, transparent 10px
+	);
+	opacity: .24;
+}
+
+/* Navigation — l'element actif se distingue par la valeur et le trait,
+   jamais par une teinte (cf. tokens/colors.css du design system). */
+.wp-block-navigation .current-menu-item > a,
+.wp-block-navigation .current_page_item > a {
+	color: var(--wp--preset--color--ink-900);
+	border-bottom: 2px solid currentColor;
+	padding-bottom: 3px;
+}
