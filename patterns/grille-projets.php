@@ -3,14 +3,14 @@
  * Title: Grille de projets
  * Slug: tritons/grille-projets
  * Categories: tritons
- * Description: Quadrillage de miniatures. Le nom du projet n'apparaît qu'au survol, sur un voile sombre. Chaque miniature est cliquable : page dédiée, site du groupe ou réseau social.
+ * Description: Quadrillage de miniatures, livré avec trois projets. Le nom n'apparaît qu'au survol. Pour en ajouter un, dupliquez une miniature ou insérez le motif « Projet — une miniature ».
  * Keywords: projets, groupes, grille, miniatures
  *
  * @package tritons
  */
 
 $tritons_image   = esc_url( get_theme_file_uri( 'assets/logo-tritons.png' ) );
-$tritons_projets = array( 'Premier projet', 'Deuxième projet', 'Troisième projet', 'Quatrième projet', 'Cinquième projet', 'Sixième projet' );
+$tritons_projets = array( 'Premier projet', 'Deuxième projet', 'Troisième projet' );
 ?>
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|xxxl"}},"layout":{"type":"grid","minimumColumnWidth":"150px"}} -->
 <div class="wp-block-group">
