@@ -43,7 +43,8 @@ add_action( 'after_setup_theme', 'tritons_editor_styles' );
  * déclare ici : il suit le thème partout, y compris sur le serveur o2switch.
  */
 function tritons_favicon() {
-	$logo = get_theme_file_uri( 'assets/logo-tritons.svg' );
+	// Variante « small » : sous 64 px, le dessin complet se brouille (cf. DS).
+	$logo = get_theme_file_uri( 'assets/logo-tritons-small.svg' );
 	printf(
 		'<link rel="icon" href="%s" type="image/svg+xml">' . "\n",
 		esc_url( $logo )

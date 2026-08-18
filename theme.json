@@ -6,7 +6,7 @@
 		"useRootPaddingAwareAlignments": true,
 		"layout": {
 			"contentSize": "660px",
-			"wideSize": "1120px"
+			"wideSize": "660px"
 		},
 		"color": {
 			"defaultPalette": false,
@@ -304,6 +304,14 @@
 			"radius": true,
 			"style": true,
 			"width": true
+		},
+		"custom": {
+			"duration": {
+				"ui": "250ms"
+			},
+			"easing": {
+				"out": "cubic-bezier(0.16, 1, 0.3, 1)"
+			}
 		}
 	},
 	"styles": {

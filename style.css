@@ -18,11 +18,11 @@ Text Domain: tritons
    Tout le reste (couleurs, typo, espacements) vient de theme.json.
    -------------------------------------------------------------------------- */
 
-/* Logo du site — l'image et sa taille sont gerees par le bloc natif
-   « Logo du site », televerse dans la mediatheque. Sur fond encre, on
-   inverse le noir et le blanc plutot que de maintenir un second fichier. */
-.tritons-logo-inverse img {
-	filter: invert(1);
+/* Logo du pied de page — le design system fournit un fichier blanc dedie
+   et proscrit l'inversion par filtre CSS. Le bloc image s'en charge ; il ne
+   reste ici qu'a neutraliser la marge que WordPress applique aux figures. */
+.tritons-logo-pied {
+	margin: 0;
 }
 
 /* Navigation — la page courante se signale par la graisse, le survol par
@@ -41,7 +41,7 @@ Text Domain: tritons
 	width: 0;
 	height: 2px;
 	background-color: currentColor;
-	transition: width .25s ease;
+	transition: width var(--wp--custom--duration--ui) var(--wp--custom--easing--out);
 }
 
 .wp-block-navigation a:hover::after,
@@ -82,7 +82,7 @@ Text Domain: tritons
 .tritons-miniature .wp-block-cover__background,
 .tritons-miniature .wp-block-cover__inner-container {
 	opacity: 0;
-	transition: opacity .25s ease;
+	transition: opacity var(--wp--custom--duration--ui) var(--wp--custom--easing--out);
 }
 
 .tritons-miniature:hover .wp-block-cover__background,

@@ -56,6 +56,19 @@ dans `theme.json` — ne jamais les recopier ici.
   à `80`) restent publiés dans le CSS même avec `defaultSpacingSizes: false`.
   Ce réglage ne filtre que le sélecteur de l'éditeur. Ils sont inutilisés :
   ne pas chercher à les supprimer.
+- **Les règles issues de `theme.json` perdent contre certains blocs.** WordPress
+  les enveloppe dans `:where()`, dont la priorité est nulle par construction.
+  La navigation, par exemple, impose `color: inherit` à ses liens via une
+  classe doublée : aucune consigne `elements.link` ne peut la dépasser. Colorer
+  alors le **bloc** (`styles.blocks`), dont les liens héritent.
+- **`ch` n'est jamais une largeur de mise en page.** L'unité dépend de la
+  police de l'élément qui l'applique : un titre à 48 px et un paragraphe à
+  17 px n'obtiennent pas la même largeur. Le DS le documente désormais.
+- **Les patterns ne sont recensés qu'au démarrage.** Créer `patterns/` pendant
+  que Playground tourne ne suffit pas : il faut relancer le serveur.
+- **Le logo ne s'inverse pas en CSS.** Le DS fournit un fichier blanc dédié et
+  proscrit `filter: invert()`. Il fournit aussi deux dessins selon la taille :
+  la variante « small » en dessous de 64 px, le dessin complet au-dessus.
 - **La médiathèque ne voyage pas avec Git.** Tout média référencé par le thème
   (logo du site) devra être téléversé à la main sur le serveur.
 
