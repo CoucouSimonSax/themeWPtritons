@@ -34,15 +34,45 @@ Text Domain: tritons
 	padding-bottom: 3px;
 }
 
-/* Miniatures de projet — le design system impose le noir et blanc sur les
-   visuels (cf. ProjectCard du DS). Un traitement d'image ne s'exprime pas
-   dans theme.json : il vit donc ici, avec le logo. */
-.tritons-miniature img {
-	filter: grayscale(1) contrast(1.05);
-	transition: filter .2s ease;
+/* Miniatures de projet — le nom n'apparaît qu'au survol, sur un voile
+   sombre. Le design system impose par ailleurs le noir et blanc sur les
+   visuels (cf. ProjectCard du DS). Ni le voile ni le traitement d'image
+   ne s'expriment dans theme.json : ils vivent donc ici. */
+.tritons-miniature.wp-block-cover {
+	aspect-ratio: 1;
+	min-height: 0;
+	padding: var(--wp--preset--spacing--sm);
 }
 
-.tritons-miniature a:hover img,
-.tritons-miniature a:focus-visible img {
-	filter: grayscale(1) contrast(1.05) brightness(1.08);
+.tritons-miniature .wp-block-cover__image-background {
+	filter: grayscale(1) contrast(1.05);
+}
+
+/* Voile et nom : masqués au repos, révélés au survol comme au clavier. */
+.tritons-miniature .wp-block-cover__background,
+.tritons-miniature .wp-block-cover__inner-container {
+	opacity: 0;
+	transition: opacity .25s ease;
+}
+
+.tritons-miniature:hover .wp-block-cover__background,
+.tritons-miniature:focus-within .wp-block-cover__background {
+	opacity: .55;
+}
+
+.tritons-miniature:hover .wp-block-cover__inner-container,
+.tritons-miniature:focus-within .wp-block-cover__inner-container {
+	opacity: 1;
+}
+
+/* Le lien du titre couvre toute la miniature : on clique n'importe où. */
+.tritons-miniature a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.tritons-miniature a::after {
+	content: "";
+	position: absolute;
+	inset: 0;
 }
