@@ -25,13 +25,41 @@ Text Domain: tritons
 	filter: invert(1);
 }
 
-/* Navigation — l'element actif se distingue par la valeur et le trait,
-   jamais par une teinte (cf. tokens/colors.css du design system). */
-.wp-block-navigation .current-menu-item > a,
-.wp-block-navigation .current_page_item > a {
+/* Navigation — la page courante se signale par la graisse, le survol par
+   un trait qui se dessine de gauche à droite. Jamais par une teinte
+   (cf. tokens/colors.css du design system). */
+.wp-block-navigation a {
+	position: relative;
+	text-decoration: none;
+}
+
+.wp-block-navigation a::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+	width: 0;
+	height: 2px;
+	background-color: currentColor;
+	transition: width .25s ease;
+}
+
+.wp-block-navigation a:hover::after,
+.wp-block-navigation a:focus-visible::after {
+	width: 100%;
+}
+
+/* La classe est doublée à dessein : WordPress impose « color: inherit »
+   aux liens du menu avec la même astuce, et il faut la dépasser pour que
+   la hiérarchie de valeurs du design system s'applique. */
+.wp-block-navigation .wp-block-navigation-item__content.wp-block-navigation-item__content:hover,
+.wp-block-navigation .wp-block-navigation-item__content.wp-block-navigation-item__content:focus-visible {
 	color: var(--wp--preset--color--ink-900);
-	border-bottom: 2px solid currentColor;
-	padding-bottom: 3px;
+}
+
+.wp-block-navigation .current-menu-item > .wp-block-navigation-item__content.wp-block-navigation-item__content {
+	font-weight: 700;
+	color: var(--wp--preset--color--ink-900);
 }
 
 /* Miniatures de projet — le nom n'apparaît qu'au survol, sur un voile
@@ -48,7 +76,9 @@ Text Domain: tritons
 	filter: grayscale(1) contrast(1.05);
 }
 
-/* Voile et nom : masqués au repos, révélés au survol comme au clavier. */
+/* Voile et nom masqués au repos. Révélés au survol, et au clavier via
+   :focus-visible — mais pas après un clic à la souris, qui laisse le
+   focus sur le lien sans que l'effet doive persister. */
 .tritons-miniature .wp-block-cover__background,
 .tritons-miniature .wp-block-cover__inner-container {
 	opacity: 0;
@@ -56,12 +86,12 @@ Text Domain: tritons
 }
 
 .tritons-miniature:hover .wp-block-cover__background,
-.tritons-miniature:focus-within .wp-block-cover__background {
+.tritons-miniature:has(:focus-visible) .wp-block-cover__background {
 	opacity: .55;
 }
 
 .tritons-miniature:hover .wp-block-cover__inner-container,
-.tritons-miniature:focus-within .wp-block-cover__inner-container {
+.tritons-miniature:has(:focus-visible) .wp-block-cover__inner-container {
 	opacity: 1;
 }
 

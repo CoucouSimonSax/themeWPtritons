@@ -395,24 +395,19 @@
 		},
 		"blocks": {
 			"core/navigation": {
+				"color": {
+					"text": "var:preset|color|ink-500"
+				},
 				"typography": {
 					"fontSize": "var:preset|font-size|meta",
-					"fontWeight": "700",
+					"fontWeight": "400",
 					"letterSpacing": "0.16em",
 					"textTransform": "uppercase"
 				},
 				"elements": {
 					"link": {
-						"color": {
-							"text": "var:preset|color|ink-500"
-						},
 						"typography": {
 							"textDecoration": "none"
-						},
-						":hover": {
-							"color": {
-								"text": "var:preset|color|ink-900"
-							}
 						}
 					}
 				}
