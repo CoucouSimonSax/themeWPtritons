@@ -51,3 +51,17 @@ function tritons_favicon() {
 }
 add_action( 'wp_head', 'tritons_favicon' );
 add_action( 'admin_head', 'tritons_favicon' );
+
+/**
+ * Catégorie de patterns propre au thème.
+ *
+ * Les patterns du dossier /patterns/ s'y rangent, pour qu'ils apparaissent
+ * groupés dans l'inséreur de blocs plutôt que noyés parmi ceux de WordPress.
+ */
+function tritons_pattern_category() {
+	register_block_pattern_category(
+		'tritons',
+		array( 'label' => __( 'Les Tritons', 'tritons' ) )
+	);
+}
+add_action( 'init', 'tritons_pattern_category' );

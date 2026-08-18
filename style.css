@@ -33,3 +33,16 @@ Text Domain: tritons
 	border-bottom: 2px solid currentColor;
 	padding-bottom: 3px;
 }
+
+/* Miniatures de projet — le design system impose le noir et blanc sur les
+   visuels (cf. ProjectCard du DS). Un traitement d'image ne s'exprime pas
+   dans theme.json : il vit donc ici, avec le logo. */
+.tritons-miniature img {
+	filter: grayscale(1) contrast(1.05);
+	transition: filter .2s ease;
+}
+
+.tritons-miniature a:hover img,
+.tritons-miniature a:focus-visible img {
+	filter: grayscale(1) contrast(1.05) brightness(1.08);
+}
