@@ -22,13 +22,19 @@ Text Domain: tritons
 .tritons-logo {
 	display: block;
 	flex: none;
-	width: 44px;
-	height: 44px;
+	width: 64px;
+	height: 64px;
 	background: url(assets/logo-tritons.svg) center / contain no-repeat;
 }
 
 .tritons-logo--blanc {
 	background-image: url(assets/logo-tritons-blanc.svg);
+}
+
+/* Pied de page : la marque peut respirer davantage. */
+.tritons-logo--grand {
+	width: 72px;
+	height: 72px;
 }
 
 /* Portee — cinq lignes espacees de 9px, motif de marque du pied de page. */
@@ -37,7 +43,7 @@ Text Domain: tritons
 	background-image: repeating-linear-gradient(
 		to bottom,
 		currentColor 0, currentColor 1px,
-		transparent 1px, transparent 10px
+		transparent 1px, transparent 9px
 	);
 	opacity: .24;
 }
