@@ -9,7 +9,7 @@
  * @package tritons
  */
 ?>
-<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/logo-tritons.png' ) ); ?>","dimRatio":50,"customOverlayColor":"#000000","isUserOverlayColor":true,"contentPosition":"center center","className":"tritons-miniature","layout":{"type":"constrained"}} -->
+<!-- wp:cover {"url":"<?php echo esc_url( get_theme_file_uri( 'assets/logo-tritons.png' ) ); ?>","dimRatio":50,"customOverlayColor":"#000000","isUserOverlayColor":true,"contentPosition":"center center","className":"tritons-miniature","layout":{"type":"default"}} -->
 <div class="wp-block-cover tritons-miniature">
 	<span aria-hidden="true" class="wp-block-cover__background has-background-dim" style="background-color:#000000"></span>
 	<img class="wp-block-cover__image-background" src="<?php echo esc_url( get_theme_file_uri( 'assets/logo-tritons.png' ) ); ?>" alt=""/>

@@ -7,7 +7,7 @@ Description: Thème bloc de l'association Les Tritons.
 Requires at least: 7.0
 Tested up to: 7.0
 Requires PHP: 8.1
-Version: 0.3.0
+Version: 0.3.1
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tritons
@@ -79,6 +79,20 @@ Text Domain: tritons
 	display: grid;
 	place-items: center;
 	padding: var(--wp--preset--spacing--sm);
+	/* WordPress impose width:100% a ce conteneur. Sans border-box, le padding
+	   s'ajoute a cette largeur au lieu de s'y loger : le cadre deborde a
+	   droite et le nom se retrouve decale d'autant. */
+	box-sizing: border-box;
+}
+
+/* Les pages deja construites gardent l'ancienne disposition « contrainte »,
+   qui impose au nom une largeur maximale et des marges automatiques — d'ou
+   un texte decale. WordPress pose ces marges en !important : les annuler
+   demande la meme arme. */
+.tritons-miniature .wp-block-cover__inner-container > * {
+	max-width: none;
+	margin-left: 0 !important;
+	margin-right: 0 !important;
 }
 
 /* Voile et nom masqués au repos. Révélés au survol, et au clavier via

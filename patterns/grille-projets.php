@@ -16,7 +16,7 @@ $tritons_projets = array( 'Premier projet', 'Deuxième projet', 'Troisième proj
 <div class="wp-block-group">
 <?php foreach ( $tritons_projets as $tritons_nom ) : ?>
 
-	<!-- wp:cover {"url":"<?php echo $tritons_image; ?>","dimRatio":50,"customOverlayColor":"#000000","isUserOverlayColor":true,"contentPosition":"center center","className":"tritons-miniature","layout":{"type":"constrained"}} -->
+	<!-- wp:cover {"url":"<?php echo $tritons_image; ?>","dimRatio":50,"customOverlayColor":"#000000","isUserOverlayColor":true,"contentPosition":"center center","className":"tritons-miniature","layout":{"type":"default"}} -->
 	<div class="wp-block-cover tritons-miniature">
 		<span aria-hidden="true" class="wp-block-cover__background has-background-dim" style="background-color:#000000"></span>
 		<img class="wp-block-cover__image-background" src="<?php echo $tritons_image; ?>" alt=""/>
