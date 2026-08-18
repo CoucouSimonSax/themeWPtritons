@@ -22,8 +22,8 @@ $tritons_projets = array( 'Premier projet', 'Deuxième projet', 'Troisième proj
 		<img class="wp-block-cover__image-background" src="<?php echo $tritons_image; ?>" alt=""/>
 		<div class="wp-block-cover__inner-container">
 
-			<!-- wp:paragraph {"align":"center","style":{"typography":{"letterSpacing":"0.16em","textTransform":"uppercase","fontWeight":"700","lineHeight":"1.3"}},"textColor":"paper-000","fontSize":"meta"} -->
-			<p class="has-text-align-center has-paper-000-color has-text-color has-meta-font-size" style="text-transform:uppercase;letter-spacing:0.16em;font-weight:700;line-height:1.3"><a href="#"><?php echo esc_html( $tritons_nom ); ?></a></p>
+			<!-- wp:paragraph {"align":"center","style":{"typography":{"letterSpacing":"0.16em","textTransform":"uppercase","lineHeight":"1.3"}},"textColor":"paper-000","fontSize":"meta"} -->
+			<p class="has-text-align-center has-paper-000-color has-text-color has-meta-font-size" style="text-transform:uppercase;letter-spacing:0.16em;line-height:1.3"><a href="#"><?php echo esc_html( $tritons_nom ); ?></a></p>
 			<!-- /wp:paragraph -->
 
 		</div>
