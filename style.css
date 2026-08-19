@@ -7,7 +7,7 @@ Description: Thème bloc de l'association Les Tritons.
 Requires at least: 7.0
 Tested up to: 7.0
 Requires PHP: 8.1
-Version: 0.3.5
+Version: 0.3.7
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tritons
@@ -146,4 +146,10 @@ Text Domain: tritons
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-close {
 	top: var(--wp--preset--spacing--xl);
 	right: var(--wp--preset--spacing--xl);
+}
+
+/* Même respiration entre la croix de fermeture et le premier titre
+   qu'entre deux titres. */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content > ul {
+	margin-top: var(--wp--preset--spacing--lg);
 }
