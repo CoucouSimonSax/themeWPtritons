@@ -10,5 +10,5 @@
  */
 ?>
 <!-- wp:image {"width":"72px","linkDestination":"custom","className":"tritons-logo-pied"} -->
-<figure class="wp-block-image tritons-logo-pied"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/logo-tritons-blanc.png' ) ); ?>" alt="Les Tritons" style="width:72px"/></a></figure>
+<figure class="wp-block-image tritons-logo-pied"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( get_theme_file_uri( 'assets/logo-tritons-blanc.svg' ) ); ?>" alt="Les Tritons" style="width:72px"/></a></figure>
 <!-- /wp:image -->
