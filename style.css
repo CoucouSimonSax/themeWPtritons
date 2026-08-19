@@ -7,7 +7,7 @@ Description: Thème bloc de l'association Les Tritons.
 Requires at least: 7.0
 Tested up to: 7.0
 Requires PHP: 8.1
-Version: 0.3.1
+Version: 0.3.5
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: tritons
@@ -125,4 +125,25 @@ Text Domain: tritons
 	content: "";
 	position: absolute;
 	inset: 0;
+}
+
+/* Menu mobile déployé — WordPress ouvre le panneau sans aucune marge : les
+   entrées se plaquent contre le bord droit de l'écran. Sa propre règle de
+   marge s'appuie sur une variable de marge racine absente ici, si bien
+   qu'elle s'effondre à zéro.
+
+   On marge le contenu plutôt que le panneau : ainsi le bouton de fermeture,
+   que WordPress place déjà correctement, reste aligné sur les entrées au
+   lieu d'être repoussé d'autant. */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
+	padding-right: var(--wp--preset--spacing--xl);
+	padding-bottom: var(--wp--preset--spacing--xl);
+	padding-left: var(--wp--preset--spacing--xl);
+	box-sizing: border-box;
+}
+
+/* Le bouton de fermeture s'aligne sur la même marge que les entrées. */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-close {
+	top: var(--wp--preset--spacing--xl);
+	right: var(--wp--preset--spacing--xl);
 }

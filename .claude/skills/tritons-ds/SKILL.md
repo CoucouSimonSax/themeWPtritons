@@ -69,6 +69,11 @@ dans `theme.json` — ne jamais les recopier ici.
 - **Le logo ne s'inverse pas en CSS.** Le DS fournit un fichier blanc dédié et
   proscrit `filter: invert()`. Il fournit aussi deux dessins selon la taille :
   la variante « small » en dessous de 64 px, le dessin complet au-dessus.
+- **Incrémenter `Version:` dans `style.css` à chaque modification du CSS.**
+  `functions.php` en fait la clé de cache de la feuille de style. Sans
+  incrément, le navigateur resert l'ancienne version sous la même adresse — et
+  toute mesure faite ensuite porte sur un fichier périmé, ce qui envoie
+  chercher des causes imaginaires.
 - **La médiathèque ne voyage pas avec Git.** Tout média référencé par le thème
   (logo du site) devra être téléversé à la main sur le serveur.
 
